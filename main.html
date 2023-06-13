@@ -1,16 +1,106 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <style>
+    #container {
+      width: 280px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: lightgrey;
+    }
+	  nav{
+		  display:flex;
+		  flex-direection:column;
+		  background-color:rgb(118,74,188);
+		  gap:30px;
+		  
+	  }
+	  #container .nav{
+		  display:flex;
+		    flex-direection:column;
+		  gap:20px;
+	  }
+	  a{   
+/* 		  color:white; */
+	  }
+
+    .notification {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    .notification img {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    .notification p {
+      margin: 0;
+    }
+
+    .notification .user {
+      font-weight: bold;
+    }
+
+    .notification .time {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-weight: normal;
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    #view-more-btn {
+      margin-top: 10px;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #02203c;
+      color: white;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <div id="container">
+	  <nav>
+		  <h1>GenZ</h1></br>
+		  <div class="nav">
+			   <div>
+			  <a href="#">Posts<a>
+				  <a href="#">Users<a>
+					  <a href="#">Notifications<a>
+		  </div>
+			   <div>
+			  <button>Refresh Notifications</button>
+		  </div>
+			  
+		  </div>
+		  
+	  </nav>
+    <h3>Notifications</h3>
+    <div class="notification">
+<!--       <img src="notification_image_1.jpg" alt="Notification Image"> -->
+      <p><span class="user">John Doe</span> commented on your post.</p>
+      <span class="time">2 hours ago</span>
+    </div>
+    <div class="notification">
+<!--       <img src="notification_image_2.jpg" alt="Notification Image"> -->
+      <p><span class="user">Jane Smith</span> liked your photo.</p>
+      <span class="time">1 day ago</span>
+    </div>
+    <div class="notification">
+<!--       <img src="notification_image_3.jpg" alt="Notification Image"> -->
+      <p><span class="user">Alex Johnson</span> sent you a message.</p>
+      <span class="time">1 week ago</span>
+    </div>
+    <button id="view-more-btn">View More</button>
+  </div>
 </body>
-
 </html>
